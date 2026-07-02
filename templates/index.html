@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Driver Drowsiness Detection System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+         <h1>🚗 Driver Drowsiness Detection System</h1>
+
+         <p>Real-Time Driver Safety Monitoring Dashboard</p>
+
+        </div>
+
+        <div class="system-info">
+
+            <span class="online-dot"></span>
+
+            <span>System Online</span>
+
+           
+
+        </div>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <div class="dashboard">
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-panel">
+
+            <div class="camera-card">
+
+                <h2>📷 Live Camera</h2>
+              <div id="cameraContainer">
+
+                 <div class="camera-placeholder">
+
+                 <div class="camera-icon">📷</div>
+
+                    <h2>Camera Stopped</h2>
+
+                    <p>Press <b>Start</b> to Continue</p>
+
+                 </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right-panel">
+
+            <div class="card">
+
+                <h3>Status</h3>
+
+                <p id="status">🟢 Awake</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>EAR</h3>
+
+                <p id="ear">0.00</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>MAR</h3>
+
+                <p id="mar">0.00</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Blinks</h3>
+
+                <p id="blinks">0</p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Yawns</h3>
+
+                <p id="yawns">0</p>
+
+            </div>
+
+         </div>
+
+    </div>
+
+    <!-- ================= CONTROLS ================= -->
+
+    <div class="controls">
+
+        <button id="startBtn" class="start-btn">
+            ▶ Start
+        </button>
+
+        <button id="stopBtn" class="stop-btn">
+            ⏹ Stop
+        </button>
+
+        <button id="resetBtn" class="reset-btn">
+            🔄 Reset
+        </button>
+
+    </div>
+
+    <!-- ================= ALERT ================= -->
+
+   <div class="alert-box" id="alert">
+    ✅ No Drowsiness Detected
+</div>
+
+</div> <!-- container ends here -->
+
+<div class="developer-credit">
+    Abhishek Choubey | B.Tech CSDS
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
