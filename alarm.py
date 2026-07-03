@@ -1,28 +1,17 @@
-import pygame
-
-pygame.mixer.init()
-
-pygame.mixer.music.load("alarm.wav")
-
-alarm_playing = False
+# =========================================
+# alarm.py
+# Render Compatible Version
+# =========================================
 
 def play_alarm():
-    global alarm_playing
+    # Browser JavaScript alarm handle karega
+    pass
 
-    if not alarm_playing:
-        pygame.mixer.music.play(-1)   # Loop continuously
-        alarm_playing = True
 
 def stop_alarm():
-    global alarm_playing
-
-    if alarm_playing:
-        pygame.mixer.music.stop()
-        alarm_playing = False
+    # Browser JavaScript alarm handle karega
+    pass
 
 
 if __name__ == "__main__":
-    print("Testing Alarm...")
-    play_alarm()
-    input("Press Enter to stop...")
-    stop_alarm()
+    print("Alarm module loaded successfully.")
