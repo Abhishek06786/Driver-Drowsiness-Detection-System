@@ -125,11 +125,6 @@ def reset():
 
 if __name__ == "__main__":
 
-    camera = cv2.VideoCapture(0)
-
-    if camera.isOpened():
-        camera_running = True
-
     app.run(
         debug=True,
         threaded=True
